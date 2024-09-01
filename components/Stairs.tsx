@@ -32,7 +32,11 @@ const Stairs = () => {
             delay: reversedIndex(index) * 0.1,
           }}
           className="h-full w-full bg-white relative"
-        /> 
+        >
+            <div className="h-full w-full text-black bg-center items-center text-2xl">
+                Hello bhai
+            </div>
+        </motion.div> 
         );
       })}
     </>
