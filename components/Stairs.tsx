@@ -1,4 +1,5 @@
-import { animate, delay, easeInOut, motion } from "framer-motion";
+import { animate, delay, easeInOut, motion, AnimatePresence } from "framer-motion";
+import Image from 'next/image';
 
 const stairAnimation = {
   initial: {
@@ -31,11 +32,11 @@ const Stairs = () => {
             ease: "easeInOut",
             delay: reversedIndex(index) * 0.1,
           }}
-          className="h-full w-full bg-white relative"
+          className="h-full w-full bg-center bg-cover bg-white relative"
         >
-            <div className="h-full w-full text-black bg-center items-center text-2xl">
+            {/* <div className="h-full w-full text-black bg-center items-center text-2xl">
                 Hello bhai
-            </div>
+            </div> */}
         </motion.div> 
         );
       })}
