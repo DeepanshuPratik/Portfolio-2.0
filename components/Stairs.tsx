@@ -28,15 +28,12 @@ const Stairs = () => {
           animate="animate"
           exit="exit"
           transition={{
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
             delay: reversedIndex(index) * 0.1,
           }}
           className="h-full w-full bg-center bg-cover bg-white relative"
         >
-            {/* <div className="h-full w-full text-black bg-center items-center text-2xl">
-                Hello bhai
-            </div> */}
         </motion.div> 
         );
       })}
