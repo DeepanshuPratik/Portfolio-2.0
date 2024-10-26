@@ -1,6 +1,6 @@
 "use client"; 
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs } from "react-icons/fa";
+import { FaHtml5,FaGithub, FaAndroid, FaDatabase, FaReact, FaFigma, FaNodeJs } from "react-icons/fa";
 import {SiTailwindcss, SiNextdotjs} from 'react-icons/si';
 
 //about data
@@ -97,12 +97,16 @@ const skills = {
   description: 'Lorem ipsum 2',
   skillList: [
     {
-      icon: <FaHtml5 />,
-      name: "HTML 5"
+      icon: <FaAndroid />,
+      name: "Android"
     },
     {
-      icon: <FaFigma />,
-      name: "Figma"
+      icon: <FaDatabase />,
+      name: "PSQL"
+    },
+    {
+      icon: <FaGithub />,
+      name: "Github"
     },
     {
       icon: <FaNodeJs />,
@@ -111,6 +115,14 @@ const skills = {
     {
       icon: <FaReact />,
       name: "React"
+    },
+    {
+      icon: <FaFigma />,
+      name: "Figma"
+    },
+    {
+      icon: <FaHtml5 />,
+      name: "HTML 5"
     }
   ]
 }
@@ -191,15 +203,15 @@ const Resume = () => {
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
                   <p className="max-w-[600px] text-white/70 mx-auto xl:mx-0">{skills.description}</p>
-                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                     {skills.skillList.map((skill, index)=>{
                       return <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger>
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <div className="text-6xl group-hover:text-accent transition-all items-center duration-300">{skill.icon}</div>
                             </TooltipTrigger>
-                            <TooltipContent>{skill.name}</TooltipContent>
+                            <TooltipContent className="capitalize">{skill.name}</TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
                       </li>;
@@ -208,8 +220,24 @@ const Resume = () => {
                 </div>
               </div> 
             </TabsContent>
-            <TabsContent value="about" className="w-full">
-              About Me 
+            <TabsContent value="about" className="w-full text-center xl:text-left">
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">
+                  {about.title}
+                </h3>
+                <p className="max-w-[600px] text-white/70 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 gap-x-14 max-w-[900px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => { 
+                      return <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                        <span className="text-white/70">{item.fieldName}</span>
+                        <span className="text-lg">{item.fieldValue}</span>
+                      </li>
+                    })
+                  }
+                </ul>
+              </div> 
             </TabsContent>
             
           </div>
