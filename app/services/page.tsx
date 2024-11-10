@@ -48,8 +48,8 @@ const Services = () => {
       open={isModalOpen}
       onClose={handleCloseModal}
       images={[
-        "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg",
         "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg",
+        "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg",
         "https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_960_720.jpg"
       ]}
     >
