@@ -43,9 +43,9 @@ const projects = [
     Author: "John Doe",
     AuthorImage: "https://example.com/images/john_doe.jpg",
     Images: [
-      "https://example.com/images/project1_img1.jpg",
-      "https://example.com/images/project1_img2.jpg",
-      "https://example.com/images/project1_img3.jpg",
+      "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg",
+      "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg",
+      "https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_960_720.jpg"
     ],
   },
   {
@@ -54,8 +54,9 @@ const projects = [
     Author: "Jane Smith",
     AuthorImage: "https://example.com/images/jane_smith.jpg",
     Images: [
-      "https://example.com/images/project2_img1.jpg",
-      "https://example.com/images/project2_img2.jpg",
+      "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg",
+      "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg",
+      "https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_960_720.jpg"
     ],
   },
   {
@@ -64,10 +65,9 @@ const projects = [
     Author: "Alice Johnson",
     AuthorImage: "https://example.com/images/alice_johnson.jpg",
     Images: [
-      "https://example.com/images/project3_img1.jpg",
-      "https://example.com/images/project3_img2.jpg",
-      "https://example.com/images/project3_img3.jpg",
-      "https://example.com/images/project3_img4.jpg",
+      "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg",
+      "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg",
+      "https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_960_720.jpg"
     ],
   },
   {
