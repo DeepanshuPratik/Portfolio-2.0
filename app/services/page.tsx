@@ -41,7 +41,7 @@ const projects = [
     Heading: "Exploring the Future of Technology",
     Body: "This project dives into emerging technologies like AI, blockchain, and quantum computing, examining their impact on society.",
     Author: "John Doe",
-    AuthorImage: "https://example.com/images/john_doe.jpg",
+    AuthorImage: "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg",
     Images: [
       "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg",
       "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg",
