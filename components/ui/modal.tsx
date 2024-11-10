@@ -52,7 +52,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ open, onClose, images }) => {
                 }}
                 aria-label="previous image"
             >
-                <div className="w-20 h-20 rounded-full flex justify-center items-center bg-white hover:bg-accent transition-colors duration-300">
+                <div className="w-20 h-20 rounded-full flex justify-center items-center bg-white hover:bg-accent  transition-all duration-500">
                     <ArrowBackIosIcon />
                 </div>
             </IconButton>
@@ -73,7 +73,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ open, onClose, images }) => {
                 }}
                 aria-label="next image"
             >
-                <div className="w-20 h-20 rounded-full flex justify-center items-center bg-white hover:bg-accent transition-colors duration-300">
+                <div className="w-20 h-20 rounded-full flex justify-center items-center bg-white hover:bg-accent  transition-all duration-500">
                     <ArrowForwardIosIcon />
                 </div>
             </IconButton>
