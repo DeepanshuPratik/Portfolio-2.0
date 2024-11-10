@@ -7,8 +7,6 @@ import {
   Slider,
   IconButton,
 } from "@mui/material";
-import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Carousel from 'react-material-ui-carousel';
@@ -81,8 +79,8 @@ const CustomModal: React.FC<CustomModalProps> = ({
         </IconButton>
         <Box sx={style}>
           <Box className="flex items-center justify-center h-screen max-w-full max-h-full mx-auto">
-            <div className="flex flex-row">
-              <div className="mx-3">
+            <div className="flex flex-row w-full h-full">
+              <div className="mx-3 w-1/2">
                 {/* <img
                   src={projects[currentIndex].Images}
                   alt={`image ${currentIndex}`}
@@ -93,14 +91,14 @@ const CustomModal: React.FC<CustomModalProps> = ({
                   animation="slide" 
                   indicators={true} 
                   stopAutoPlayOnHover={true}
-                  navButtonsAlwaysVisible={true} 
+                  navButtonsAlwaysVisible={false} 
                 >
                   {projects[currentIndex].Images.map((item, index) => (
                     <img src={item} alt="" />
                   ))}
                 </Carousel>
               </div>
-              <div className="mx-3">
+              <div className="mx-3 w-1/2">
                 <h1 className="text-black">{projects[currentIndex].Heading}</h1>
                 <div className="flex flex-row items-center align-middle">
                   <img
