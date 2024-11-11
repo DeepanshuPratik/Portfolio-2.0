@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import profilePic from "../public/assets/deepanshu.png";
+
 const Photo = () => {
   return (
     <div className="w-full h-full relative">
@@ -30,11 +31,13 @@ const Photo = () => {
           />
         </motion.div>
 
-        <motion.svg className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
-        fill="transparent"
-        viewBox="0 0 506 506" 
-        xmlns = "http://www.w3.org/2000/svg">
-            <motion.circle
+        <motion.svg
+          className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
+          fill="transparent"
+          viewBox="0 0 506 506"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <motion.circle
             cx="253"
             cy="253"
             r="250"
@@ -44,14 +47,29 @@ const Photo = () => {
             strokeLinejoin="round"
             initial={{ strokeDasharray: "24 10 0 0" }}
             animate={{
-                strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
-                rotate: [120,360]
+              strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
+              rotate: [120, 360],
             }}
             transition={{
-                duration: 20,
-                repeat: Infinity,
-                repeatType: "reverse"
+              duration: 20,
+              repeat: Infinity,
+              repeatType: "reverse",
             }}
+          />
+          <motion.image
+                href="/assets/android-logo.png"  // Replace with your logo path
+                x={5}                     // Center the logo on the path
+                y={315}
+                width="50"                     // Adjust size as needed
+                height="50"
+                style={{ originX: 5, originY: -0.2 }}
+                animate={{
+                    rotate: [0, 360]           // Rotate the logo if needed
+                }}
+                transition={{
+                    duration: 12,
+                    repeat: Infinity,
+                }}
             />
         </motion.svg>
       </motion.div>
