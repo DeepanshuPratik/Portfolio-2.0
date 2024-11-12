@@ -57,20 +57,20 @@ const Photo = () => {
             }}
           />
           <motion.image
-                href="/assets/android-logo.png"  // Replace with your logo path
-                x={5}                     // Center the logo on the path
-                y={315}
-                width="50"                     // Adjust size as needed
-                height="50"
-                style={{ originX: 5, originY: -0.2 }}
-                animate={{
-                    rotate: [0, 360]           // Rotate the logo if needed
-                }}
-                transition={{
-                    duration: 12,
-                    repeat: Infinity,
-                }}
-            />
+            href="/assets/android-logo.png" // Replace with your logo path
+            x={6} // Center the logo on the path
+            y={275}
+            width="40" // Adjust size as needed
+            height="40"
+            style={{ originX: 6, originY: -0.5 }}
+            animate={{
+              rotate: [0, 360], // Rotate the logo if needed
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+            }}
+          />
         </motion.svg>
       </motion.div>
     </div>
