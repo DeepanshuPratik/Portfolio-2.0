@@ -26,26 +26,15 @@ interface CustomModalProps {
     projects: CarousalItem[];
 }
 
-const style = {
-    position: "absolute" as const,
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "80vw",
-    height: "60vh",
-    maxWidth: 1000,
-    maxHeight: 500,
-    bgcolor: "background.paper",
-    boxShadow: 24,
-    p: 4,
-    borderRadius: 2,
-};
+
 
 const CustomModal: React.FC<CustomModalProps> = ({
     open,
     onClose,
     projects,
 }) => {
+
+    
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
     const handlePrev = () => {
@@ -53,11 +42,30 @@ const CustomModal: React.FC<CustomModalProps> = ({
             prevIndex > 0 ? prevIndex - 1 : projects.length - 1
         );
     };
-
+    // const [dimensions, setDimensions] = useState({ height: window.innerWidth, height: window.innerHeight });
     const handleNext = () => {
         setCurrentIndex((prevIndex: number) =>
             prevIndex < projects.length - 1 ? prevIndex + 1 : 0
         );
+    };
+    const style = {
+        position: "absolute" as const,
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        width: "80vw",
+        // height: "60vh",
+        height: window.innerWidth >= 768 ? "60vh" : "100vh",
+        maxWidth: 900,
+        // maxHeight: 350,
+        // maxHeight: window.innerWidth >= 768 ? 350 : 900,
+        maxHeight: window.innerHeight >= 768 ? "30vh" : "100vh",
+    
+        bgcolor: "background.paper",
+        boxShadow: 24,
+        p: 1,
+        borderRadius: 2,
+        overflow: "hidden",
     };
     return (
         <Modal open={open} onClose={onClose}>
@@ -79,22 +87,26 @@ const CustomModal: React.FC<CustomModalProps> = ({
                 </IconButton>
                 <Box sx={style}>
                     <Box className="flex items-center justify-center h-screen max-w-full max-h-full mx-auto">
-                        <div className="flex flex-row w-full h-full mt-5">
-                            <div className="mx-3 w-3/5 h-full flex items-center justify-center">
+                        <div className="flex flex-col sm:flex-col md:flex-row w-full h-full p-4">
+                            <div className="sm:w-full md:w-3/5 h-full flex items-center justify-center">
                                 <Carousel
                                     interval={3000}
                                     animation="slide"
                                     indicators={true}
                                     stopAutoPlayOnHover={true}
                                     navButtonsAlwaysVisible={false}
+                                    // className="w-full h-[303px]"
                                     className="w-full h-full"
+                                    indicatorContainerProps={{
+                                        className: "absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10",
+                                    }}
                                 >
                                     {projects[currentIndex].Images.map((item, index) => (
-                                        <img src={item} alt="" className="w-full h-full object-cover" />
+                                        <div className="w-full h-[303px]"><img src={item} alt="" className="w-full h-full object-cover" /></div>
                                     ))}
                                 </Carousel>
                             </div>
-                            <div className="mx-3 w-1/2">
+                            <div className="mx-5 mt-3 w-1/2">
                                 <h1 className="text-black font-extrabold text-xl">{projects[currentIndex].Heading}</h1>
                                 <h2 className="text-black">{projects[currentIndex].Body}</h2>
                                 <div className="flex flex-row items-center align-middle">
