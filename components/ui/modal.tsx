@@ -86,7 +86,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
 
                 <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[650px] md:h-[350px] max-w-[900px] bg-white shadow-lg p-4 rounded-lg overflow-y-auto">
                 <Box className="flex items-center justify-center h-screen max-w-full max-h-full mx-auto">
-                        <div className="flex flex-col sm:flex-col md:flex-row w-full h-full p-4">
+                        <div className="flex flex-col md:flex-row w-full h-full p-4">
                             <div className="sm:w-full md:w-3/5 h-full flex items-center justify-center">
                                 <Carousel
                                     interval={3000}
@@ -105,7 +105,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
                                     ))}
                                 </Carousel>
                             </div>
-                            <div className="mx-5 mt-3 w-full sm:w-1/2">
+                            <div className="mx-5 mt-3 w-full">
                                 <h1 className="text-black font-extrabold text-xl">{projects[currentIndex].Heading}</h1>
                                 <h2 className="text-black">{projects[currentIndex].Body}</h2>
                                 <div className="flex flex-row items-center align-middle">
