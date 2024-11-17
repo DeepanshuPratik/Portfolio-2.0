@@ -101,7 +101,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
                                     }}
                                 >
                                     {projects[currentIndex].Images.map((item, index) => (
-                                        <div className="w-full h-[303px]"><img src={item} alt="" className="w-full h-full object-cover" /></div>
+                                        <div key={index} className="w-full h-[303px]"><img src={item} alt="" className="w-full h-full object-cover" /></div>
                                     ))}
                                 </Carousel>
                             </div>
