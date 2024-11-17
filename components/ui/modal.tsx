@@ -84,7 +84,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
                 {/* <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80vw] max-w-[900px] bg-white shadow-lg p-4 rounded-lg md:h-[60vh] h-[350px] overflow-y-auto"> */}
 
 
-                <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[90vh] md:h-[60vh] max-w-[900px] max-h-[350px] bg-white shadow-lg p-4 rounded-lg overflow-y-auto">
+                <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[650px] md:h-[350px] max-w-[900px] bg-white shadow-lg p-4 rounded-lg overflow-y-auto">
                 <Box className="flex items-center justify-center h-screen max-w-full max-h-full mx-auto">
                         <div className="flex flex-col sm:flex-col md:flex-row w-full h-full p-4">
                             <div className="sm:w-full md:w-3/5 h-full flex items-center justify-center">
