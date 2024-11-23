@@ -43,10 +43,8 @@ const projects = [
     Author: "John Doe",
     AuthorImage: "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg",
     Images: [
-      "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg",
-      "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg",
-      "https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_960_720.jpg",
-      '/assets/deepanshu_Trial.png'
+      '/assets/mobile.jpeg',
+      '/assets/mobile.jpeg'
     ],
   },
   {
@@ -58,6 +56,7 @@ const projects = [
       "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg",
       "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg",
       "https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_960_720.jpg"
+      
     ],
   },
   {
