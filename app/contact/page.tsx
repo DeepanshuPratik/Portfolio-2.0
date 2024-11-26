@@ -50,11 +50,9 @@ const Contact = () => {
     message: "",
     severity: "info",
   });
-  const form = useRef(null);
-
+  const form = useRef<HTMLFormElement | null>(null);
   const sendEmail = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // setOpen(true);
     if (
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
@@ -75,8 +73,7 @@ const Contact = () => {
               message: "Message sent successfully",
               severity: "success",
             });
-            // form.current.reset();
-          },
+            form.current?.reset()          },
           (error) => {
             setSnackbarState({
               open: true,
